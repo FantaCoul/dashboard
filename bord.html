@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Bord</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="section">
+    <h2>Nombre total de badges vendus sur acxes</h2>
+    <div class="summary">
+      <p><strong>Total général :</strong> <span id="totalBadgesGeneral">0</span></p>
+      <div class="filters">
+        <label for="filter">Filtrer par période :</label>
+        <select id="filter">
+          <option value="tous">Tous</option>
+          <option value="jour">Jour</option>
+          <option value="semaine">Semaine</option>
+          <option value="mois">Mois</option>
+        </select>
+      </div>
+      <p><strong>Total filtré :</strong> <span id="totalBadgesFiltered">0</span></p>
+    </div>
+    <div class="chart">
+      <canvas id="badgeChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Bibliothèque Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
